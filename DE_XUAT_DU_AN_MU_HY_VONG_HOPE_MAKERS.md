@@ -118,15 +118,15 @@ Nhóm **Hope Makers** xin trân trọng cảm ơn và kính mong nhận được
 - **Kinh tế tuần hoàn & Tái chế sáng tạo (Upcycling Textile):** Quy trình tái sử dụng các mảnh vải vụn, vải thừa mới (deadstock/fabric scraps) từ chuỗi sản xuất công nghiệp may mặc để tạo ra các sản phẩm mới có giá trị sử dụng và giá trị tinh thần cao hơn mà không cần tiêu tốn năng lượng tái chế nguyên liệu thô.
 - **Doanh nghiệp xã hội / Cơ sở tạo việc làm cho người khuyết tật:** Các hợp tác xã, trung tâm hướng nghiệp hỗ trợ người khuyết tật vận động, khiếm thính hòa nhập xã hội thông qua các công việc thủ công, may mặc.
 
-### 1.2. Đánh giá các dự án cùng chủ đề tiền nhiệm
+### 1.2. Đánh giá các dự án cùng chủ đề tiền nhiệm & bài học kinh nghiệm
 
-| Tên dự án | Mô hình hoạt động | Ưu điểm nổi bật | Điểm hạn chế / Khoảng trống cần cải thiện |
-|:---|:---|:---|:---|
-| **Mạng lưới Vì trẻ ung thư** | Trao học bổng, quà bánh dịp lễ Tết, hỗ trợ viện phí | Quy mô lớn, tiếp cận nhiều bệnh viện trung ương | Thường mang tính trợ cấp thụ động; thiếu các sản phẩm chăm sóc thể chất cá nhân hóa thường ngày |
-| **Trạm Tóc Ước Mơ (BCNV)** | Vận động hiến tóc tự nhiên, gia công tóc giả cho bệnh nhân ung thư | Tác động truyền thông cực lớn, tóc thật mang tính thẩm mỹ cao | Tóc giả nặng (300-500g), bí bách, ngứa ngáy đối với da đầu nhạy cảm của trẻ nhỏ; thời gian bảo quản khó; chi phí gia công cao (khoảng 2.000.000đ - 3.500.000đ/bộ) |
-| **Ngày hội Hoa Hướng Dương** | Viết thông điệp, gây quỹ từ thiện qua tranh vẽ | Lan tỏa tinh thần mạnh mẽ trên mạng xã hội | Hoạt động thường niên mang tính thời điểm, chưa có chuỗi hoạt động tương tác trải nghiệm đều đặn cho bệnh nhi tại phòng bệnh |
+| Tên dự án / Mô hình | Mô hình hoạt động | Ưu điểm nổi bật | Điểm hạn chế / Khoảng trống cần cải thiện | Đột phá của "Mũ Hi Vọng" |
+|:---|:---|:---|:---|:---|
+| **Dự án "Họa Nắng"**<br>*(SV FPT SSG105 - [Fanpage](https://www.facebook.com/profile.php?id=61580819031976))* | Phim ngắn *"Giữ lấy ánh dương"*, chiến dịch gây quỹ *"Gửi nắng cho em"* hỗ trợ bệnh nhi ung thư máu Viện Huyết học TW | Truyền thông cảm xúc sâu sắc, lan tỏa tinh thần sống đẹp mạnh mẽ trong sinh viên FPT | Hoạt động dừng ở hỗ trợ tinh thần (truyền thông) và tặng quà/suất ăn thời điểm; chưa có sản phẩm y sinh chuyên biệt xử lý rụng tóc, viêm da đầu cho trẻ | Mũ 100% cotton compact y tế giấu chỉ êm dịu 24/7, kết hợp Workshop Art Therapy bé tự trang trí chữa lành tâm lý |
+| **Dự án Thiện nguyện "Sẻ"**<br>*(SV FPT - [Fanpage](https://www.facebook.com/profile.php?id=61587290214252))* | Thăm hỏi, giao lưu và tặng quà người khuyết tật tại TT Phục hồi chức năng Thụy An | Đạt Giải Nhì *"Seedlings of Change"*; tinh thần phụng sự vì cộng đồng, thấu hiểu đối tượng yếu thế | Mô hình cứu trợ từ thiện truyền thống ngắn hạn (thăm hỏi & tặng nhu yếu phẩm); chưa tạo ra sinh kế việc làm tự chủ dài hạn | Nâng tầm thành "Tạo sinh kế tự chủ" (chi trả 25.000đ/mũ cho thợ may khuyết tật), biến người yếu thế thành người trao gửi yêu thương |
+| **Trạm Tóc Ước Mơ (BCNV) & Mũ Len** | Hiến tóc tự nhiên làm tóc giả; đan mũ len ấm mùa đông tặng bệnh nhân ung thư | Tác động truyền thông cực lớn, giá trị nhân ái cao | Tóc giả nặng (300-500g), bí bách, ngứa ngáy, khó giặt sấy trong viện, giá thành cao triệu đồng; len dễ phát tán bụi xơ dị ứng | Vòng tròn **Triple Impact**: Tái sinh vải vụn sạch 0đ $\rightarrow$ Mũ cotton nhẹ, co giãn 4 mùa, giặt sấy y tế dễ dàng, chi phí chỉ ~35.000đ/cái |
 
-**Kết luận rút ra:** Hiện nay đang có một "khoảng trống" lớn về mặt sản phẩm: Bệnh nhi ung thư rất cần những chiếc mũ vải mềm mại, tiện dụng hàng ngày, không gây kích ứng da đầu, nhẹ nhàng, thoáng khí và có màu sắc vui tươi, nhưng trên thị trường hầu như chỉ có mũ len dày (nóng, dễ xơ bụi) hoặc mũ vải người lớn không vừa vặn và thiếu tính thẩm mỹ trẻ thơ.
+**Kết luận rút ra:** Hiện nay đang có một "khoảng trống" lớn về mặt giải pháp y sinh kết hợp sinh kế: Bệnh nhi ung thư rất cần những chiếc mũ vải mềm mại, tiện dụng hàng ngày, không gây kích ứng da đầu, nhẹ nhàng, thoáng khí và có màu sắc vui tươi, nhưng trên thị trường hầu như chỉ có mũ len dày (nóng, dễ xơ bụi) hoặc mũ vải người lớn không vừa vặn. Đồng thời, mô hình thiện nguyện sinh viên truyền thống thường dừng ở việc thăm hỏi, tặng quà một chiều mà chưa tạo dựng được chuỗi giá trị tuần hoàn bền vững (kết nối thợ may khuyết tật tạo ra sản phẩm y tế trao tặng bệnh nhi). Dự án "Mũ Hi Vọng" ra đời để giải quyết trọn vẹn cả hai khoảng trống này.
 
 ### 1.3. Xác định vấn đề thực tế & Phân tích nguyên nhân
 
