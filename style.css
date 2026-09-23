@@ -1885,6 +1885,24 @@ body.is-editing .document-wrapper img:hover {
   text-align: right;
 }
 
+.benchmark-table {
+  font-size: 10px;
+}
+
+.benchmark-table th {
+  font-size: 10px;
+  padding: 5px 6px;
+  background-color: #D9ECFA;
+  letter-spacing: 0.2px;
+}
+
+.benchmark-table td {
+  padding: 5px 7px;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 1.38;
+}
+
 .date-pill {
   display: inline-block;
   background-color: #E9EDF4;
