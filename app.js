@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initFullStudioEngine() {
-  const STORAGE_KEY = 'hope_makers_full_document_v3';
+  const STORAGE_KEY = 'hope_makers_full_document_v5';
   const docWrapper = document.querySelector('.document-wrapper');
   const toggleBtn = document.getElementById('btn-toggle-edit');
   const saveBtn = document.getElementById('btn-manual-save');
