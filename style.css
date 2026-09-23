@@ -1,0 +1,2762 @@
+/* =========================================================
+   STYLE.CSS - HOPE MAKERS "MŨ HI VỌNG" PROPOSAL STUDIO
+   Distinctive Social Impact Magazine & Lookbook Aesthetic
+   With Anatomical Diagrams, Wax Seal, Postage Stamp,
+   Color Therapy Chart, Hope Bus Roadmap & Print-Perfect PDF
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Quicksand:wght@500;600;700;800&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+
+:root {
+  /* Brand Palette from Canva Logo "MŨ HI VỌNG" */
+  --primary-blue: #2A8AE4;
+  --primary-blue-dark: #1E6CB8;
+  --primary-blue-light: #E1F2FE;
+  
+  --coral-h: #FF755B;
+  --green-i: #4CAF50;
+  --salmon-v: #FF6347;
+  --amber-o: #FFA726;
+  --mint-n: #26A69A;
+  --teal-g: #00897B;
+  
+  --sun-yellow: #FDB813;
+  --sun-yellow-light: #FFF9E6;
+  --sun-yellow-border: #FFE082;
+  
+  --hill-green-front: #78C88E;
+  --hill-green-back: #A4E2B5;
+  --cloud-blue: #BCE3FD;
+  --cloud-yellow: #FDE896;
+  --heart-pink: #FF7A85;
+
+  /* Overall Document Canvas */
+  --bg-canvas: #F4F6F8; /* Clean soft neutral canvas */
+  --page-bg: #FFFFFF;
+  --page-border: #E2E8F0;
+  --text-main: #2D241E; /* Deep warm coffee brown */
+  --text-muted: #555555;
+  --card-bg: #FFFFFF;
+  --border-subtle: #E2E8F0;
+
+  --shadow-soft: none;
+  --shadow-hover: none;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================
+   FLOATING STUDIO CONTROLS (Top Bar)
+   ========================================================= */
+.studio-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 253, 247, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--sun-yellow-border);
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(253, 184, 19, 0.12);
+}
+
+.studio-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.studio-logo-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--sun-yellow);
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+  background: #fff;
+}
+
+.studio-brand h1 {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.studio-brand span {
+  font-size: 11.5px;
+  color: #B26A00;
+  background: var(--sun-yellow-light);
+  border: 1px solid var(--sun-yellow-border);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.studio-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-tool {
+  border: none;
+  background: #fff;
+  color: var(--text-main);
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-tool:hover {
+  background: #FFF9E6;
+  border-color: var(--sun-yellow);
+  transform: translateY(-1px);
+}
+
+.btn-tool.btn-primary {
+  background: linear-gradient(135deg, #FF755B 0%, #FFA726 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(255, 117, 91, 0.3);
+}
+
+.btn-tool.btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.btn-tool.active {
+  background: var(--primary-blue);
+  color: #fff;
+  border: none;
+}
+
+/* =========================================================
+   DOCUMENT CONTAINER & A4 MULTI-PAGE
+   ========================================================= */
+.document-wrapper {
+  max-width: 940px;
+  margin: 30px auto 80px auto;
+  padding: 0 20px;
+}
+
+.doc-page {
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--page-border);
+  transition: box-shadow 0.3s;
+  box-sizing: border-box;
+  width: 794px;
+  height: 1123px;
+  min-height: 1123px;
+  max-height: 1123px;
+}
+
+.doc-page:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.page-header-canva-cloud,
+.page-footer-canva-hills {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.page-content {
+  padding: 40px 48px 36px 48px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page-number-tag {
+  display: none !important;
+}
+
+
+/* =========================================================
+   NEW HOPE MAKERS COVER PAGE (SPACIOUS & EDITORIAL)
+   ========================================================= */
+#page-1.cover-page {
+  background: #E8F5F6 url('cover_perfect_hoa_nang.png') no-repeat center center !important;
+  background-size: 100% 100% !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  min-height: 1123px;
+  height: 1123px;
+  max-height: 1123px;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.cover-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #C8E6C9;
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.cover-fpt-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cover-fpt-svg {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.cover-header-divider {
+  width: 2px;
+  height: 36px;
+  background: #A5D6A7;
+}
+
+.cover-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cover-uni-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: #E65100;
+  letter-spacing: 0.5px;
+}
+
+.cover-course-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2E7D32;
+}
+
+.cover-team-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cover-team-text {
+  text-align: right;
+}
+
+.cover-team-name {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #1B5E20;
+}
+
+.cover-class-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: #FF755B;
+}
+
+.cover-avatar-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid #FFE082;
+  object-fit: cover;
+  background: #fff;
+}
+
+.cover-hero-banner-box {
+  width: 100%;
+  height: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid #C8E6C9;
+  background: #FFFDE7;
+  flex-shrink: 0;
+}
+
+.cover-hero-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-hero-center {
+  text-align: center;
+  margin: 10px 0 8px 0;
+}
+
+.cover-badge-pill {
+  display: inline-block;
+  background: #E8F5E9;
+  color: #2E7D32;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 16px;
+  border-radius: 20px;
+  border: 1px solid #A5D6A7;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.cover-rainbow-title {
+  font-size: 27px;
+  font-weight: 900;
+  color: #1565C0;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.cover-slogan-text {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #D84315;
+  font-style: italic;
+}
+
+.cover-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.cover-card-academic {
+  background: #FFFFFF;
+  border: 1.5px solid #C8E6C9;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-card-title-academic {
+  font-size: 12px;
+  font-weight: 900;
+  color: #2E7D32;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1.5px dashed #C8E6C9;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cover-dossier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11.5px;
+}
+
+.cover-dossier-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0;
+  border-bottom: 1px solid #F1F8E9;
+}
+
+.cover-dossier-item.no-border {
+  border-bottom: none;
+  padding-top: 2px;
+}
+
+.dossier-label {
+  color: #555555;
+  font-weight: 600;
+}
+
+.dossier-val-green { color: #1B5E20; }
+.dossier-val-orange { color: #E65100; }
+.dossier-val-blue { color: #0277BD; }
+.dossier-val-dark { color: #2D241E; }
+.dossier-val-pink { color: #C2185B; }
+
+.cover-card-impact {
+  background: #FFFFFF;
+  border: 1.5px solid #FFE082;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-card-title-impact {
+  font-size: 12px;
+  font-weight: 900;
+  color: #E65100;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1.5px dashed #FFE082;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cover-impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.impact-pill-coral {
+  background: #FFF3E0;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border-left: 3.5px solid #FF7043;
+}
+
+.impact-pill-green {
+  background: #E8F5E9;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border-left: 3.5px solid #4CAF50;
+}
+
+.impact-pill-blue {
+  background: #E1F5FE;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border-left: 3.5px solid #29B6F6;
+}
+
+.cover-bottom-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 6px;
+  font-size: 10px;
+  color: #777777;
+}
+
+#page-1 .page-header-canva-cloud,
+#page-1 .page-footer-canva-hills {
+  display: none !important;
+}
+
+.hoa-nang-cover-content {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 40px !important;
+  box-sizing: border-box;
+}
+
+.hoa-nang-cover-text {
+  text-align: center;
+  margin-top: -45px;
+}
+
+.hn-project-code {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #214C8C;
+  background: rgba(33, 76, 140, 0.08);
+  border: 1px solid rgba(33, 76, 140, 0.25);
+  padding: 3px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.hn-main-title {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #0F172A;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.hn-project-title {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #214C8C;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.5px;
+}
+
+.hn-credentials {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #334155;
+}
+
+.hn-credentials p {
+  margin: 0;
+}
+
+.hn-cred-lbl {
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.hn-term-year {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: absolute !important;
+  bottom: 24px !important;
+  right: 32px !important;
+  margin: 0 !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  color: #214C8C !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  padding: 4px 14px !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  text-transform: none !important;
+  z-index: 10 !important;
+}
+
+/* =========================================================
+   HỌA NẮNG TABLE OF CONTENTS (PAGE 3)
+   ========================================================= */
+.hn-toc-wrapper {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.hn-toc-main-heading {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #1A3D1E;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.hn-toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 15px;
+}
+
+.hn-toc-row {
+  display: flex;
+  align-items: baseline;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.hn-toc-row.level-0 .hn-toc-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111;
+}
+
+.hn-toc-row.level-1 .hn-toc-title {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #1A3D1E;
+}
+
+.hn-toc-row.level-2 {
+  padding-left: 20px;
+}
+
+.hn-toc-row.level-2 .hn-toc-title {
+  font-size: 12.5px;
+  color: #333;
+}
+
+.hn-toc-dots {
+  flex-grow: 1;
+  border-bottom: 1.5px dotted #888;
+  margin: 0 8px 3px 8px;
+  min-width: 15px;
+}
+
+.hn-toc-page {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #1A3D1E;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   HỌA NẮNG TEAM CHARTER BOX (PAGE 3 BOTTOM)
+   ========================================================= */
+.hn-charter-box {
+  background: #FCFDFB;
+  border: 1.5px solid #B6D7A8;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+.hn-charter-banner {
+  background: #B6D7A8;
+  color: #1A3D1E;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hn-charter-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+}
+
+.hn-rules-col h4,
+.hn-reward-col h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1A3D1E;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hn-rules-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #2D241E;
+}
+
+.hn-rules-list li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.hn-rules-list li::before {
+  content: "•";
+  color: #2E7D32;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.hn-reward-card {
+  background: #F1F8E9;
+  border-left: 3px solid #66BB6A;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  color: #1B5E20;
+}
+
+.hn-penalty-card {
+  background: #FFF3E0;
+  border-left: 3px solid #FFA726;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #B26A00;
+}
+
+/* Academic Dossier Card */
+.cover-dossier-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--sun-yellow-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dossier-header {
+  font-size: 11px;
+  font-weight: 900;
+  color: #E65100;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1.5px dashed var(--sun-yellow-border);
+  padding-bottom: 5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dossier-body {
+  font-size: 11.5px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dossier-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+  border-bottom: 1px solid #FFF8E1;
+}
+
+.dossier-row:last-child {
+  border-bottom: none;
+  padding-top: 4px;
+}
+
+.dossier-lbl {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.dossier-val {
+  color: var(--text-main);
+  font-weight: 700;
+  text-align: right;
+  font-size: 11.5px;
+}
+
+.dossier-mission-box {
+  background: #FFFDE7;
+  border: 1px dashed #FFE082;
+  border-radius: 8px;
+  padding: 6px 8px;
+  margin-top: 4px;
+  font-size: 10.5px;
+  line-height: 1.4;
+  color: #5D4037;
+}
+
+.highlight-team {
+  color: #D84315;
+  background: #FBE9E7;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* 3 Pillars Highlights Box */
+.cover-highlights-box {
+  background: #FFFFFF;
+  border: 1.5px solid var(--sun-yellow-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlights-box-header {
+  font-size: 11.5px;
+  font-weight: 900;
+  color: #0277BD;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1.5px dashed #B3E5FC;
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.highlight-micro-card {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.highlight-card-green {
+  background: #F1F8E9;
+  border-color: #DCEDC8;
+}
+
+.highlight-card-blue {
+  background: #E1F5FE;
+  border-color: #B3E5FC;
+}
+
+.highlight-card-coral {
+  background: #FFF3E0;
+  border-color: #FFE0B2;
+}
+
+.highlight-card-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.highlight-card-green .highlight-card-badge { color: #33691E; }
+.highlight-card-blue .highlight-card-badge { color: #0277BD; }
+.highlight-card-coral .highlight-card-badge { color: #D84315; }
+
+.highlight-card-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: #37474F;
+  line-height: 1.25;
+}
+
+.highlight-card-desc {
+  font-size: 10.5px;
+  color: #616161;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   WAX SEAL & VINTAGE POSTAGE STAMP (THƯ NGỎ)
+   ========================================================= */
+.letter-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.postage-stamp {
+  width: 76px;
+  height: 90px;
+  background: #FFF8E1;
+  border: 2px dashed #D7CCC8;
+  box-shadow: none;
+  padding: 4px;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stamp-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--sun-yellow);
+}
+
+.stamp-txt {
+  font-size: 8px;
+  font-weight: 800;
+  color: #8D6E63;
+  letter-spacing: 0.5px;
+}
+
+.wax-seal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFF3E0;
+  border: 1.5px solid #FF7043;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #D84315;
+}
+
+/* =========================================================
+   INFOGRAPHIC 1: ANATOMY OF HOPE BEANIE (GIẢI PHẪU MŨ)
+   ========================================================= */
+.anatomy-container {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFFDF5 100%);
+  border: 1.5px solid var(--sun-yellow-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 18px 0;
+  box-shadow: none;
+  position: relative;
+}
+
+.anatomy-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.anatomy-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: #5D4037;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.anatomy-subtitle {
+  font-size: 12px;
+  color: #795548;
+  font-weight: 700;
+}
+
+.anatomy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.anatomy-feature-box {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  box-shadow: none;
+}
+
+.anatomy-feature-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #E65100;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.anatomy-feature-desc {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.anatomy-center-illustration {
+  text-align: center;
+  position: relative;
+}
+
+.anatomy-beanie-svg {
+  width: 180px;
+  height: 160px;
+  filter: none;
+}
+
+/* =========================================================
+   INFOGRAPHIC 2: THE UPCYCLING JOURNEY (VÒNG ĐỜI MẢNH VẢI)
+   ========================================================= */
+.upcycling-journey-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+  position: relative;
+}
+
+.journey-step-card {
+  background: #FFFFFF;
+  border: 1.5px solid #C8E6C9;
+  border-radius: var(--radius-md);
+  padding: 14px 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: none;
+  transition: transform 0.2s;
+}
+
+.journey-step-card:hover {
+  transform: translateY(-3px);
+}
+
+.journey-badge-num {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sun-yellow);
+  color: #5D4037;
+  font-size: 10.5px;
+  font-weight: 900;
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1.5px solid #fff;
+  box-shadow: none;
+}
+
+.journey-icon {
+  font-size: 26px;
+  margin: 6px 0 4px 0;
+}
+
+.journey-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #2D241E;
+  margin-bottom: 4px;
+}
+
+.journey-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* =========================================================
+   INFOGRAPHIC 3: COLOR THERAPY (BẢNG MÀU CẢM XÚC CHO BÉ)
+   ========================================================= */
+.color-therapy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.therapy-pill-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 12px 8px;
+  text-align: center;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: none;
+}
+
+.therapy-swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 auto 6px auto;
+  border: 2px solid #fff;
+  box-shadow: none;
+}
+
+.therapy-color-name {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.therapy-emotion {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #E65100;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   INFOGRAPHIC 4: THE HOPE BUS ROADMAP (CHUYẾN XE HY VỌNG)
+   ========================================================= */
+.hope-roadmap-box {
+  background: linear-gradient(135deg, #FFFDF8 0%, #E8F5E9 100%);
+  border: 2px solid #C8E6C9;
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin: 18px 0;
+  position: relative;
+}
+
+.roadmap-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.roadmap-node {
+  background: #FFFFFF;
+  border: 1.5px solid #A5D6A7;
+  border-radius: var(--radius-sm);
+  padding: 10px 6px;
+  text-align: center;
+  position: relative;
+}
+
+.roadmap-week-tag {
+  background: #2E7D32;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.roadmap-station-name {
+  font-size: 11px;
+  font-weight: 800;
+  color: #1B5E20;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   DONATION PACKAGES (MENU GÂY QUỸ TRỰC QUAN)
+   ========================================================= */
+.donation-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.package-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--sun-yellow-border);
+  border-radius: var(--radius-sm);
+  padding: 18px 8px 8px 8px;
+  text-align: center;
+  box-shadow: none;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.package-card:hover {
+  transform: translateY(-2px);
+  border-color: #FFA726;
+}
+
+.package-badge-popular {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FF5722;
+  color: #fff;
+  font-size: 8.5px;
+  font-weight: 900;
+  padding: 1px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+}
+
+.package-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #5D4037;
+  margin-top: 2px;
+}
+
+.package-price {
+  font-size: 16px;
+  font-weight: 900;
+  color: #E65100;
+  margin: 2px 0 4px 0;
+}
+
+.package-features {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  line-height: 1.35;
+  text-align: left;
+  padding-left: 8px;
+  list-style: none;
+}
+
+/* =========================================================
+   CANVA TYPOGRAPHY & SECTION HEADERS
+   ========================================================= */
+.canva-section-header {
+  background: linear-gradient(135deg, #FFF9E6 0%, #E8F5E9 100%);
+  border-left: 6px solid var(--sun-yellow);
+  border-right: 1.5px solid var(--sun-yellow-border);
+  border-top: 1.5px solid var(--sun-yellow-border);
+  border-bottom: 1.5px solid var(--sun-yellow-border);
+  padding: 12px 20px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 20px;
+}
+
+.canva-section-header h2 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #5D4037;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.canva-section-header p {
+  font-size: 12.5px;
+  color: #795548;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.sub-title-pill {
+  font-size: 15px;
+  font-weight: 800;
+  color: #2E7D32;
+  margin: 18px 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sub-title-pill::before {
+  content: "🌻";
+  font-size: 15px;
+}
+
+/* =========================================================
+   CARDS, TABLES & TEAM
+   ========================================================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.canva-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  padding: 15px;
+  box-shadow: none;
+}
+
+.card-blue { border-top: 4px solid var(--primary-blue); }
+.card-coral { border-top: 4px solid var(--coral-h); }
+.card-green { border-top: 4px solid var(--green-i); }
+.card-yellow { border-top: 4px solid var(--amber-o); }
+
+.card-title-badge {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.member-card-canva {
+  background: #FFFFFF;
+  border: 1.5px solid #C8E6C9;
+  border-radius: 14px;
+  padding: 12px 10px;
+  text-align: center;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+
+.member-avatar-circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  overflow: hidden;
+  border: 2.5px solid #FFD54F;
+  position: relative;
+  cursor: pointer;
+  background: #FFF9C4;
+}
+
+.member-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.member-name-tag {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 3px;
+  letter-spacing: -0.2px;
+}
+
+.member-role-pill {
+  font-size: 10px;
+  font-weight: 800;
+  color: #B26A00;
+  background: #FFF8E1;
+  border: 1px solid #FFE082;
+  padding: 2px 9px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.member-dept-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 4px;
+}
+
+.member-task-desc {
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: #5D4037;
+}
+
+.team-commitment-box {
+  margin-top: 14px;
+  background: #F1F8E9;
+  border: 1.5px dashed #81C784;
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-hero-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #FFFFFF;
+  border: 1.5px dashed #90CAF9;
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  box-shadow: none;
+}
+
+.team-hero-img {
+  width: 220px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1.5px solid #81C784;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.team-hero-info {
+  flex: 1;
+}
+
+.stat-box-canva {
+  background: #FFFFFF;
+  border: 1.5px solid var(--sun-yellow-border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-align: center;
+  box-shadow: none;
+}
+
+.stat-number-canva {
+  font-size: 26px;
+  font-weight: 900;
+  color: #E65100;
+  line-height: 1.2;
+}
+
+.stat-desc-canva {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.table-canva-box {
+  width: 100%;
+  overflow-x: auto;
+  margin: 10px 0;
+  border-radius: var(--radius-md);
+  border: 1.5px solid #C8E6C9;
+  background: #fff;
+  box-shadow: none;
+}
+
+.table-canva {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.table-canva th {
+  background: #B6D7A8 !important;
+  color: #1A3D1E !important;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 8px;
+  border: 1px solid #78A079;
+  letter-spacing: 0.3px;
+}
+
+.table-canva td {
+  padding: 5px 8px;
+  border: 1px solid #C8E6C9;
+  vertical-align: middle;
+}
+
+.table-canva tr:nth-child(even) td {
+  background-color: #F8FBF8;
+}
+
+.table-canva .total-row td {
+  background: #E8F5E9;
+  font-weight: 700;
+  color: #1B5E20;
+  border-top: 2px solid #78A079;
+}
+
+/* Compact Budget Table (Page 10) */
+.budget-table {
+  font-size: 10.5px;
+}
+.budget-table th {
+  padding: 4px 6px;
+  font-size: 10px;
+}
+.budget-table td {
+  padding: 3px 6px;
+  font-size: 10.5px;
+  line-height: 1.25;
+}
+.budget-table .total-row td {
+  padding: 5px 8px;
+  font-size: 11.5px;
+}
+
+/* Compact RACI Table (Page 11) */
+.raci-table {
+  font-size: 10px;
+}
+.raci-table th {
+  padding: 4px 4px;
+  font-size: 9.5px;
+  line-height: 1.2;
+}
+.raci-table td {
+  padding: 3.5px 4px;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* Compact Risk Table (Page 11) */
+.risk-table {
+  font-size: 10.5px;
+}
+.risk-table th {
+  padding: 4px 6px;
+  font-size: 10px;
+}
+.risk-table td {
+  padding: 3.5px 6px;
+  font-size: 10.5px;
+  line-height: 1.25;
+}
+
+/* Compact SWOT Cards (Page 11) */
+.swot-card {
+  padding: 8px 12px !important;
+}
+.swot-card ul {
+  font-size: 10.5px !important;
+  line-height: 1.4 !important;
+}
+
+/* Upload Overlays */
+.upload-btn-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  border-radius: inherit;
+}
+
+.cover-banner-container:hover .upload-btn-overlay,
+.cover-logo-center-box:hover .upload-btn-overlay,
+.member-avatar-circle:hover .upload-btn-overlay {
+  opacity: 1;
+}
+
+.hidden-file-input {
+  display: none !important;
+}
+
+[contenteditable="true"]:hover {
+  outline: 1.5px dashed var(--sun-yellow);
+  background-color: rgba(253, 184, 19, 0.05);
+  border-radius: 4px;
+}
+
+[contenteditable="true"]:focus {
+  outline: 2px solid var(--sun-yellow);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(253, 184, 19, 0.2);
+  border-radius: 4px;
+}
+
+/* =========================================================
+   TRANG 3: TABLE OF CONTENTS (MỤC LỤC & TỔNG QUAN)
+   ========================================================= */
+.toc-header-pill {
+  display: inline-block;
+  background: #FFF8E1;
+  color: #F57F17;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 3px 12px;
+  border-radius: 12px;
+  border: 1px solid #FFE082;
+  margin-bottom: 4px;
+}
+
+.toc-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.toc-card-column {
+  background: #FFFFFF;
+  border: 1.5px solid #C8E6C9;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.toc-col-yellow {
+  border-top: 4px solid var(--amber-o);
+}
+
+.toc-col-green {
+  border-top: 4px solid var(--green-i);
+}
+
+.toc-column-title {
+  font-size: 12.5px;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.3px;
+}
+
+.toc-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toc-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.toc-item-row:hover {
+  background: #FFFDF8;
+}
+
+.toc-item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.toc-num-badge {
+  font-size: 11px;
+  font-weight: 900;
+  padding: 2px 6px;
+  border-radius: 6px;
+  min-width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.toc-num-yellow {
+  background: #FFF8E1;
+  color: #F57F17;
+  border: 1px solid #FFE082;
+}
+
+.toc-num-green {
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+
+.toc-item-text {
+  min-width: 0;
+}
+
+.toc-main-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toc-sub-text {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.toc-page-pill {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #5D4037;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Team Charter Micro-Cards */
+.charter-card-refined {
+  background: #FFFFFF;
+  border: 1.5px solid #C8E6C9;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.charter-rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.charter-rule-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text-main);
+}
+
+.charter-rule-row strong {
+  color: #4E342E;
+}
+
+.charter-reward-block {
+  background: #F1F8E9;
+  border: 1px solid #C8E6C9;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 11px;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+
+.charter-penalty-block {
+  background: #FFF3E0;
+  border: 1px solid #FFE0B2;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   CORPORATE ACADEMIC REPORT STYLES (RELOAD FIN2002 STANDARD)
+   ========================================================= */
+
+/* Top Ribbon & Section Header */
+.page-top-header {
+  margin-bottom: 12px;
+}
+
+.page-category-super {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
+}
+
+.ribbon-banner {
+  margin-left: -48px;
+  background-color: #214C8C;
+  color: #FFFFFF;
+  padding: 8px 32px 8px 48px;
+  display: inline-block;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 17.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 1.35;
+  box-shadow: 0 2px 5px rgba(33, 76, 140, 0.15);
+}
+
+.page-intro-desc {
+  font-size: 12px;
+  color: #4B5563;
+  line-height: 1.55;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+/* Page Number Badge & Bottom Footnote */
+.page-number-badge {
+  position: absolute;
+  bottom: 18px;
+  right: 40px;
+  min-width: 28px;
+  height: 25px;
+  padding: 0 6px;
+  background: #C6E7FF;
+  color: #214C8C;
+  font-weight: 800;
+  font-size: 12.5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.page-bottom-footnote {
+  position: absolute;
+  bottom: 22px;
+  left: 48px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #94A3B8;
+  letter-spacing: 0.3px;
+}
+
+/* Academic Tables */
+.academic-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 12px;
+  color: #1F2937;
+  border: 1.5px solid #214C8C;
+  background: #FFFFFF;
+}
+
+.academic-table th {
+  background-color: #C6E7FF;
+  color: #214C8C;
+  font-weight: 700;
+  text-align: center;
+  padding: 7px 8px;
+  border: 1px solid #214C8C;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.academic-table td {
+  padding: 6px 8px;
+  border: 1px solid #214C8C;
+  vertical-align: middle;
+}
+
+.academic-table tr:nth-child(even) td {
+  background-color: #F8FAFC;
+}
+
+.academic-table .col-center {
+  text-align: center;
+}
+
+.academic-table .col-left {
+  text-align: left;
+}
+
+.academic-table .col-right {
+  text-align: right;
+}
+
+.date-pill {
+  display: inline-block;
+  background-color: #E9EDF4;
+  color: #214C8C;
+  padding: 2px 9px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.academic-table tr.total-row td {
+  font-weight: 800;
+  color: #214C8C;
+  background-color: #E0F2FE !important;
+}
+
+/* Subheadings */
+.academic-section-subhead {
+  font-size: 13px;
+  font-weight: 700;
+  color: #214C8C;
+  margin: 10px 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-transform: uppercase;
+}
+
+.academic-section-subhead::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background-color: #214C8C;
+  border-radius: 2px;
+}
+
+/* Team Honeycomb / Pyramid Grid (Page 4) */
+.team-honeycomb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 10px 0 16px 0;
+}
+
+.team-honeycomb-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.team-honeycomb-col.col-side {
+  padding-top: 40px;
+}
+
+/* Team 1-3-3 Executive Pyramid Layout */
+.team-pyramid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 14px 0;
+  width: 100%;
+}
+
+.team-level-lead {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-leader .leader-avatar {
+  width: 106px;
+  height: 106px;
+  margin-bottom: 5px;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  outline: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.card-leader .academic-member-avatar {
+  border: 3px solid #1E88E5 !important;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.25);
+  border-radius: 50% !important;
+}
+
+.card-leader .leader-name {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #1E88E5 !important;
+}
+
+.card-leader .leader-role {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #214C8C !important;
+}
+
+.team-level-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 18px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.team-tier-2 .academic-member-avatar-wrapper,
+.team-tier-3 .academic-member-avatar-wrapper {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 5px;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+.team-tier-2 .academic-member-name,
+.team-tier-3 .academic-member-name {
+  font-size: 13px;
+}
+
+.team-tier-2 .academic-member-role,
+.team-tier-3 .academic-member-role {
+  font-size: 11px;
+}
+
+.team-tier-2 .academic-member-dept,
+.team-tier-3 .academic-member-dept {
+  font-size: 10px;
+}
+
+.academic-member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  background: transparent !important;
+  outline: none !important;
+}
+
+.academic-member-avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.academic-member-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% !important;
+  object-fit: cover;
+  border: 2.5px solid #214C8C;
+  box-shadow: 0 3px 8px rgba(33, 76, 140, 0.12);
+  background: #FFF;
+  outline: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+}
+
+.academic-member-avatar-wrapper .upload-btn-overlay {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+.team-pyramid-container,
+.team-pyramid-container * {
+  -webkit-user-drag: none !important;
+}
+
+.team-pyramid-container .academic-member-avatar-wrapper::selection,
+.team-pyramid-container .academic-member-avatar-wrapper *::selection,
+.team-pyramid-container img::selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.team-pyramid-container .academic-member-avatar-wrapper::-moz-selection,
+.team-pyramid-container .academic-member-avatar-wrapper *::-moz-selection,
+.team-pyramid-container img::-moz-selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.academic-member-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #214C8C;
+  margin-bottom: 2px;
+}
+
+.academic-member-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1E88E5;
+  margin-bottom: 1px;
+}
+
+.academic-member-dept {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.team-commitment-strip {
+  margin-top: auto;
+  padding: 8px 14px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-left: 4px solid #214C8C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.team-commitment-pills {
+  display: flex;
+  gap: 6px;
+}
+
+.team-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #E2E8F0;
+  color: #1E293B;
+}
+
+/* TOC Dot Leaders (Page 3) */
+.toc-container {
+  margin-bottom: 14px;
+}
+
+.toc-title-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.toc-main-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #214C8C;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.toc-decor-line {
+  width: 140px;
+  height: 2.5px;
+  background: #214C8C;
+  margin: 5px auto 0 auto;
+}
+
+.toc-item-row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.toc-item-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #214C8C;
+  white-space: nowrap;
+}
+
+.toc-item-row.sub .toc-item-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: #475569;
+  padding-left: 18px;
+}
+
+.toc-dot-leader {
+  flex-grow: 1;
+  border-bottom: 1.5px dotted #94A3B8;
+  margin: 0 8px;
+  position: relative;
+  top: -3px;
+}
+
+.toc-page-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: #214C8C;
+}
+
+/* Formal Letter (Page 2) */
+.letter-academic-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.letter-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.letter-main-heading {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 38px;
+  font-weight: 700;
+  color: #214C8C;
+  line-height: 1;
+}
+
+.letter-date-loc {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #214C8C;
+  text-align: right;
+}
+
+.letter-salutation {
+  font-size: 13px;
+  font-weight: 800;
+  color: #214C8C;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.letter-quote-bar {
+  background: #F0F9FF;
+  border-left: 4px solid #214C8C;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-style: italic;
+  color: #0369A1;
+  line-height: 1.5;
+}
+
+.letter-body-p {
+  font-size: 12.5px;
+  line-height: 1.65;
+  text-align: justify;
+  margin-bottom: 8px;
+  color: #1F2937;
+}
+
+.letter-bottom-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #E2E8F0;
+  margin-bottom: 28px !important;
+}
+
+.letter-contact-col {
+  font-size: 11.5px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.letter-contact-title {
+  font-weight: 700;
+  color: #214C8C;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.letter-signature-col {
+  text-align: center;
+  min-width: 170px;
+}
+
+.letter-signature-stamp {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 4px auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Academic Cards & Steps */
+.academic-card {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-top: 3.5px solid #214C8C;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+
+.academic-card.card-blue {
+  border-top-color: #1E88E5;
+}
+
+.academic-card.card-amber {
+  border-top-color: #F59E0B;
+}
+
+.academic-card.card-green {
+  border-top-color: #2E7D32;
+}
+
+.academic-card.card-coral {
+  border-top-color: #E11D48;
+}
+
+.academic-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #214C8C;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.academic-step-flow {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0 12px 0;
+}
+
+.academic-step-item {
+  flex: 1;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 9px 8px;
+  text-align: center;
+  position: relative;
+}
+
+.academic-step-num {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: #214C8C;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.academic-step-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 3px;
+}
+
+.academic-step-desc {
+  font-size: 10.5px;
+  color: #64748B;
+  line-height: 1.35;
+}
+
+.stat-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 8px 0 12px 0;
+}
+
+.stat-metric-card {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 9px 10px;
+  text-align: center;
+}
+
+.stat-metric-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #214C8C;
+  line-height: 1.2;
+}
+
+.stat-metric-desc {
+  font-size: 10.5px;
+  color: #4B5563;
+  line-height: 1.35;
+  margin-top: 4px;
+}
+
+/* =========================================================
+   PRINT STYLES (@media print) - STANDARD A4 MULTI-PAGE
+   Exact 210mm x 297mm per page, zero cut-offs, zero spill
+   ========================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
+    width: 210mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #FFFDF6 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .studio-navbar,
+  .upload-btn-overlay,
+  .hidden-file-input,
+  .no-print {
+    display: none !important;
+  }
+
+  .document-wrapper {
+    width: 210mm !important;
+    max-width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .doc-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    min-height: 297mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    background: #FFFFFF !important;
+  }
+
+  .page-header-canva-cloud,
+  .page-footer-canva-hills,
+  .page-number-tag {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .doc-page:not(#page-1) .page-content {
+    padding: 11mm 14mm 10mm 14mm !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
+    max-height: 297mm !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .page-number-badge {
+    position: absolute !important;
+    bottom: 6mm !important;
+    right: 12mm !important;
+    z-index: 10 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .page-bottom-footnote {
+    position: absolute !important;
+    bottom: 7mm !important;
+    left: 14mm !important;
+    font-size: 8pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .ribbon-banner {
+    margin-left: -14mm !important;
+    padding-left: 14mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .academic-table th {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .date-pill {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Table compacting in print */
+  .table-canva-box {
+    margin: 6px 0 !important;
+  }
+
+  .table-canva th,
+  .table-canva td {
+    padding: 4px 6px !important;
+    font-size: 8.5pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .budget-table th,
+  .budget-table td {
+    padding: 2.5px 5px !important;
+    font-size: 7.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .budget-table .total-row td {
+    padding: 4px 6px !important;
+    font-size: 8.5pt !important;
+  }
+
+  .raci-table th,
+  .raci-table td {
+    padding: 2.5px 3px !important;
+    font-size: 7.5pt !important;
+    line-height: 1.15 !important;
+  }
+
+  .risk-table th,
+  .risk-table td {
+    padding: 2.5px 5px !important;
+    font-size: 7.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Cards in print */
+  .canva-card {
+    padding: 8px 12px !important;
+  }
+
+  .package-card {
+    padding: 16px 6px 6px 6px !important;
+  }
+
+  .package-price {
+    font-size: 13pt !important;
+    margin: 2px 0 !important;
+  }
+
+  [contenteditable="true"] {
+    outline: none !important;
+    background: transparent !important;
+  }
+
+  /* Page 1 Họa Nắng Cover in Print */
+  #page-1.cover-page {
+    background: #E8F5F6 url('cover_perfect_hoa_nang.png') no-repeat center center !important;
+    background-size: 100% 100% !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  #page-1 .page-header-canva-cloud,
+  #page-1 .page-footer-canva-hills {
+    display: none !important;
+  }
+
+  #page-1 .hoa-nang-cover-content {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 20mm !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  #page-1 .hoa-nang-cover-text {
+    text-align: center !important;
+    margin-top: -12mm !important;
+  }
+
+  #page-1 .hn-project-code {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    font-size: 8.5pt !important;
+    font-weight: 700 !important;
+    color: #214C8C !important;
+    letter-spacing: 1.5pt !important;
+    margin-bottom: 3mm !important;
+  }
+
+  #page-1 .hn-main-title {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    font-size: 24pt !important;
+    font-weight: 800 !important;
+    color: #0F172A !important;
+    margin-bottom: 2mm !important;
+    letter-spacing: 2pt !important;
+  }
+
+  #page-1 .hn-project-title {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    font-size: 18pt !important;
+    font-weight: 700 !important;
+    color: #214C8C !important;
+    margin-bottom: 6mm !important;
+    letter-spacing: 0.5pt !important;
+  }
+
+  #page-1 .hn-credentials {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.95 !important;
+    color: #334155 !important;
+  }
+
+  #page-1 .hn-term-year {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    position: absolute !important;
+    bottom: 6mm !important;
+    right: 8mm !important;
+    margin: 0 !important;
+    font-size: 8.5pt !important;
+    font-weight: 700 !important;
+    color: #214C8C !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    padding: 1.5mm 4mm !important;
+    border-radius: 5mm !important;
+    letter-spacing: 0.5pt !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+    border: 0.5pt solid rgba(255, 255, 255, 0.9) !important;
+    z-index: 10 !important;
+  }
+
+  /* TOC in Print */
+  .hn-toc-wrapper {
+    margin-top: 2mm !important;
+    margin-bottom: 4mm !important;
+  }
+  .hn-toc-main-heading {
+    font-size: 20pt !important;
+    margin-bottom: 4mm !important;
+  }
+  .hn-toc-list {
+    gap: 1.8mm !important;
+  }
+  .hn-toc-row.level-0 .hn-toc-title {
+    font-size: 10.5pt !important;
+  }
+  .hn-toc-row.level-1 .hn-toc-title {
+    font-size: 10pt !important;
+  }
+  .hn-toc-row.level-2 .hn-toc-title {
+    font-size: 9pt !important;
+  }
+  .hn-toc-page {
+    font-size: 10pt !important;
+  }
+  .hn-charter-box {
+    padding: 3mm 4mm !important;
+    margin-top: 2mm !important;
+  }
+  .hn-charter-banner {
+    font-size: 9.5pt !important;
+    padding: 1.5mm 3mm !important;
+    margin-bottom: 2mm !important;
+  }
+  .hn-rules-col h4, .hn-reward-col h4 {
+    font-size: 9pt !important;
+    margin-bottom: 1.5mm !important;
+  }
+  .hn-rules-list {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    gap: 1mm !important;
+  }
+  .hn-reward-card, .hn-penalty-card {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    padding: 1.5mm 2.5mm !important;
+  }
+
+  #page-1 .page-number-badge,
+  #page-2 .page-number-badge,
+  #page-12 .page-number-badge {
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   GEN 4 MASTERWORK FIXES (PAGES 1 - 12)
+   ========================================================= */
+
+/* Pagination Guardrail: Hide badges on Cover (1), Letter (2), and Appendix (12) */
+#page-1 .page-number-badge,
+#page-2 .page-number-badge,
+#page-12 .page-number-badge {
+  display: none !important;
+}
+
+/* Page 9: Media Tracking Table Styling */
+.media-tracking-table th {
+  padding: 5px 4px !important;
+  font-size: 10px !important;
+  line-height: 1.25 !important;
+}
+
+.media-tracking-table td {
+  padding: 4px 5px !important;
+  font-size: 10px !important;
+  line-height: 1.35 !important;
+}
+
+.badge-done {
+  display: inline-block;
+  background: #DCFCE7;
+  color: #166534;
+  font-weight: 700;
+  padding: 1.5px 5px;
+  border-radius: 3px;
+  font-size: 9px;
+  border: 1px solid #BBF7D0;
+  white-space: nowrap;
+}
+
+.badge-running {
+  display: inline-block;
+  background: #DBEAFE;
+  color: #1E40AF;
+  font-weight: 700;
+  padding: 1.5px 5px;
+  border-radius: 3px;
+  font-size: 9px;
+  border: 1px solid #BFDBFE;
+  white-space: nowrap;
+}
+
+.badge-pending {
+  display: inline-block;
+  background: #FEF3C7;
+  color: #92400E;
+  font-weight: 700;
+  padding: 1.5px 5px;
+  border-radius: 3px;
+  font-size: 9px;
+  border: 1px solid #FDE68A;
+  white-space: nowrap;
+}
+
+/* Page 10: Compact Budget Table to Guarantee scrollHeight <= 1123px */
+#page-10 .academic-table th {
+  padding: 3.5px 5px !important;
+  font-size: 10.5px !important;
+}
+
+#page-10 .academic-table td {
+  padding: 3px 5px !important;
+  font-size: 10.5px !important;
+}
+
+#page-10 .funding-structure-strip {
+  margin: 4px 0 6px 0 !important;
+  padding: 4px 8px !important;
+}
+

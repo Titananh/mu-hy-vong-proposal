@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" width="160" height="45">
+  <g transform="skewX(-18)">
+    <!-- Blue bar -->
+    <rect x="30" y="10" width="32" height="48" rx="6" fill="#0054A6"/>
+    <!-- Orange bar -->
+    <rect x="68" y="6" width="34" height="54" rx="6" fill="#F26F21"/>
+    <!-- Green bar -->
+    <rect x="108" y="10" width="32" height="48" rx="6" fill="#009639"/>
+  </g>
+  <!-- FPT Letters in white inside bars -->
+  <text x="32" y="46" font-family="Arial, sans-serif" font-weight="900" font-size="26" fill="#ffffff">F</text>
+  <text x="68" y="46" font-family="Arial, sans-serif" font-weight="900" font-size="26" fill="#ffffff">P</text>
+  <text x="104" y="46" font-family="Arial, sans-serif" font-weight="900" font-size="26" fill="#ffffff">T</text>
+  <!-- Education text -->
+  <text x="148" y="46" font-family="Arial, sans-serif" font-weight="800" font-size="24" fill="#0054A6">Education</text>
+  <!-- Subtext UNIVERSITY -->
+  <text x="30" y="78" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#F26F21" letter-spacing="3">UNIVERSITY</text>
+</svg>
