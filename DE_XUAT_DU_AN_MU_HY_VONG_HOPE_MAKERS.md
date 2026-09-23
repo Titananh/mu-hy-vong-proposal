@@ -200,13 +200,13 @@ Nhóm xây dựng **02 phương án backup toàn diện** nhằm đối phó v�
 Xoa dịu nỗi đau thể xác và mặc cảm tâm lý cho các bệnh nhi ung thư sau hóa trị; đồng thời kết nối sức mạnh sinh viên FPT với các giá trị xã hội bền vững: việc làm cho người khuyết tật và tái chế xanh thời trang.
 
 #### 2. Mục tiêu dự án (SMART Objectives):
-- **Sản phẩm bàn giao:** May và trao tặng thành công **120 chiếc mũ cotton cao cấp** đạt chuẩn an toàn y tế cho ít nhất 100 bệnh nhi ung thư trước tuần 10.
-- **Workshop trải nghiệm:** Tổ chức thành công tối thiểu **02 buổi workshop vẽ mũ** với sự tham gia của ít nhất 50 bệnh nhi và phụ huynh.
-- **Hỗ trợ việc làm:** Đảm bảo toàn bộ 120 chiếc mũ được gia công bởi các thợ may khuyết tật, chi trả thù lao hỗ trợ tối thiểu 25.000đ/sản phẩm.
-- **Tài chính & Gây quỹ:** Huy động đủ 100% kinh phí dự trù (dự kiến 7.500.000đ – 9.000.000đ) thông qua bán hàng gây quỹ và quyên góp, không bị thâm hụt tài chính.
+- **Sản phẩm bàn giao:** May và trao tặng thành công **70 chiếc mũ cotton cao cấp** đạt chuẩn an toàn y tế cho 70 bệnh nhi Khoa Nhi ung bướu - Bệnh viện K (Cơ sở Tân Triều) trước tuần 8.
+- **Workshop trải nghiệm:** Tổ chức thành công **01 buổi workshop vẽ mũ** ấm áp với sự tham gia của 70 bệnh nhi và phụ huynh tại viện.
+- **Hỗ trợ việc làm:** Đảm bảo toàn bộ 70 chiếc mũ được gia công bởi các thợ may khuyết tật, chi trả thù lao hỗ trợ 25.000đ/sản phẩm (tổng: 1.750.000 VNĐ).
+- **Tài chính & Nguồn vốn:** Đảm bảo 100% kinh phí dự án **7.000.000 VNĐ** được bảo chứng đối ứng bởi 7 thành viên nhóm (1.000.000 VNĐ/người), kết hợp menu gây quỹ xã hội hóa để hoàn vốn và mở rộng quà tặng y tế cho bệnh nhi.
 
 #### 3. Mục tiêu truyền thông:
-- **Tiếp cận Online:** Fanpage dự án đạt tối thiểu **1.500 lượt theo dõi**, tổng lượt tiếp cận (Reach) trên Facebook và TikTok đạt **15.000 lượt**, ít nhất 3 bài viết đạt trên 300 lượt tương tác/chia sẻ.
+- **Tiếp cận Online:** Tổng lượt tiếp cận (Reach) trên Facebook và TikTok đạt **23.400 lượt**, tổng tương tác đạt **2.500 lượt**, lan tỏa thông điệp yêu thương tới cộng đồng sinh viên và xã hội.
 - **Tiếp cận Offline:** Tiếp cận trực tiếp hơn **2.000 sinh viên, cán bộ giảng viên** tại campus FPT Hòa Lạc thông qua booth trải nghiệm tại sảnh Delta; thu gom ít nhất 15kg vải vụn/vải thừa sạch.
 
 ### 2.5. Lợi ích dự án mang lại
@@ -234,25 +234,23 @@ Xoa dịu nỗi đau thể xác và mặc cảm tâm lý cho các bệnh nhi ung
 
 ## III. KẾ HOẠCH THỰC HIỆN DỰ ÁN
 
-### 3.1. Timeline thực hiện dự án (Tuần 5 – Tuần 10)
+### 3.1. Timeline thực hiện dự án (8 Tuần bám sát kỳ học SSG105)
 
 ```
-Tuần 5: [Khởi động & Thu gom vải, Chốt đơn vị may]
-Tuần 6: [Gây quỹ sảnh Delta & Sản xuất mũ tại xưởng]
-Tuần 7: [Kiểm định chất lượng, Đóng gói Kit vẽ]
-Tuần 8: [Tổ chức Workshop 1 & Trao tặng tại Viện Huyết học]
-Tuần 9: [Tổ chức Workshop 2 & Trao quà tại BV Nhi TW]
-Tuần 10: [Tổng kết dự án, Báo cáo nghiệm thu môn SSG]
+Tuần 1 - 2: [Khảo sát bối cảnh, Nghiên cứu y sinh & Lập đề xuất dự án]
+Tuần 3 - 4: [Thiết kế rập mũ 2 lớp giấu chỉ, Tiếp cận xưởng may khuyết tật & BV K]
+Tuần 5 - 6: [Gây quỹ sảnh Delta & Gia công sản xuất 70 chiếc mũ vải y tế]
+Tuần 7:     [Kiểm định y tế vô trùng, Đóng gói 70 bộ kit vẽ & Hộp quà kraft]
+Tuần 8:     [Tổ chức 01 buổi Workshop & Trao tặng 70 mũ tại BV K Tân Triều; Quyết toán & Báo cáo SSG105]
 ```
 
 | Tuần | Giai đoạn | Nội dung công việc chi tiết | Đầu mối phụ trách | Sản phẩm đầu ra (Deliverables) |
 |:---:|:---|:---|:---|:---|
-| **W5** | **Khởi động & Nguyên liệu** | - Hoàn thiện Proposal & Kế hoạch chi tiết<br>- Đặt thùng thu gom vải sạch tại sảnh giảng đường<br>- Liên hệ xưởng may người khuyết tật chốt mẫu rập và giá công | Leader, Hậu cần | - Proposal phê duyệt<br>- 15kg vải cotton sạch<br>- Hợp đồng may gia công |
-| **W6** | **Gây quỹ & Gia công** | - Vận hành Booth gây quỹ bán móc khóa/sticker tại sảnh Delta<br>- Gửi vải và rập mẫu đến xưởng người khuyết tật may<br>- Khởi chạy chiến dịch truyền thông Fanpage | Tài chính, Truyền thông, Hậu cần | - Thu quỹ đạt 70% KPI<br>- Fanpage đạt 1.000 followers<br>- 60 mũ hoàn thiện đợt 1 |
-| **W7** | **Chuẩn bị Workshop & Kiểm định** | - Nhận toàn bộ 120 mũ từ xưởng, giặt hấp vô trùng<br>- Mua màu vẽ vải an toàn và phụ kiện sticker<br>- Làm việc với Phòng Công tác xã hội bệnh viện chốt danh sách bé | Thiết kế, Đối ngoại, Leader | - 120 mũ đạt chuẩn y tế<br>- 120 bộ kit màu vẽ<br>- Giấy phép tổ chức tại viện |
-| **W8** | **Triển khai Đợt 1** | - Tổ chức Workshop *"Sắc Màu Hy Vọng 1"* tại Viện Huyết học TW<br>- Bé vẽ mũ, tặng 60 suất quà và mũ<br>- Ghi nhận hình ảnh, tư liệu truyền thông | Toàn bộ thành viên nhóm | - 60 bé nhận mũ & vui vẻ vẽ tranh<br>- Bộ ảnh/clip recap đợt 1 |
-| **W9** | **Triển khai Đợt 2** | - Tổ chức Workshop *"Sắc Màu Hy Vọng 2"* tại BV Nhi TW<br>- Trao 60 chiếc mũ còn lại<br>- Đăng tải video phóng sự truyền thông kết thúc chiến dịch | Toàn bộ thành viên nhóm | - 60 bé nhận mũ đợt 2<br>- Video recap viral trên TikTok |
-| **W10**| **Tổng kết & Báo cáo** | - Quyết toán tài chính công khai minh bạch<br>- Đo lường chỉ số KPIs (truyền thông, khảo sát hài lòng)<br>- Hoàn thiện Slide thuyết trình và Báo cáo môn SSG105 | Leader, Tài chính, Nội dung | - Báo cáo tài chính chi tiết<br>- Báo cáo tổng kết môn học |
+| **W1 - W2** | **Nghiên cứu & Đề xuất** | - Khảo sát thực địa, phỏng vấn bác sĩ ung bướu & xưởng may khuyết tật<br>- Hoàn thiện Proposal 13 trang chuẩn xuất bản A4 | Leader, Nội dung | - Báo cáo khảo sát thực địa<br>- Đề xuất dự án phê duyệt |
+| **W3 - W4** | **Thiết kế & Đối tác** | - Thiết kế mẫu rập mũ tròn lộn 2 lớp giấu chỉ<br>- Ký kết hợp tác gia công với xưởng người khuyết tật<br>- Liên hệ Phòng CTXH - Bệnh viện K Tân Triều | Thiết kế, Đối ngoại | - Bản vẽ kỹ thuật rập mũ<br>- Thỏa thuận may 70 mũ<br>- Giấy tiếp nhận từ BV K |
+| **W5 - W6** | **Gây quỹ & Sản xuất** | - Vận hành Booth trải nghiệm & gây quỹ tại sảnh Delta ĐH FPT<br>- Chuyển giao vải compact và theo dõi thợ may khuyết tật gia công | Tài chính, Hậu cần, PR | - Đạt 100% mục tiêu gây quỹ<br>- 70 chiếc mũ cotton giấu chỉ |
+| **W7** | **Kiểm định & Đóng gói** | - Nhận 70 mũ từ xưởng, giặt hấp sấy tiệt trùng da liễu<br>- Mua bộ màu vẽ vải ASTM D-4236 và đóng gói 70 hộp quà kraft | Thiết kế, Đối ngoại | - 70 mũ đạt chuẩn y tế<br>- 70 hộp quà & bộ kit màu<br>- Kịch bản chi tiết workshop |
+| **W8** | **Workshop & Báo cáo** | - Tổ chức 01 buổi Workshop *"Sắc Màu Hy Vọng"* tại BV K Tân Triều<br>- Bé vẽ mũ, trao 70 suất quà y tế; Quyết toán tài chính 100% minh bạch | Toàn bộ nhóm Hope Makers | - 70 bệnh nhi nhận quà & vẽ mũ<br>- Báo cáo tổng kết môn SSG105 |
 
 ### 3.2. Timeline truyền thông chi tiết (Online & Offline)
 
@@ -277,36 +275,41 @@ Tuần 10: [Tổng kết dự án, Báo cáo nghiệm thu môn SSG]
 
 ## IV. KẾ HOẠCH TÀI CHÍNH & PHƯƠNG ÁN GÂY QUỸ
 
-### 4.1. Bảng dự trù kinh phí chi tiết
+### 4.1. Bảng dự trù kinh phí chi tiết (Tổng: 7.000.000 VNĐ — 7 Thành viên đóng góp 1 triệu/người)
 
-| STT | Hạng mục công việc / Vật phẩm | Số lượng | Đơn vị tính | Đơn giá (VNĐ) | Thành tiền (VNĐ) | Ghi chú minh chứng |
+| STT | Hạng mục công việc / Vật phẩm | Số lượng | ĐVT | Đơn giá (VNĐ) | Thành tiền (VNĐ) | Ghi chú minh chứng |
 |:---:|:---|:---:|:---:|---:|---:|:---|
-| **A** | **Chi phí Sản xuất Mũ vải (120 chiếc)** | | | | **4.200.000** | |
-| 1 | Vải vụn cotton mới / Vải thun dệt kim trợ giá | 20 | kg | 60.000 | 1.200.000 | Thu gom + mua trợ giá bổ sung |
-| 2 | Tiền công cắt may xưởng người khuyết tật | 120 | cái | 25.000 | 3.000.000 | Hỗ trợ sinh kế trực tiếp |
-| **B** | **Chi phí Bộ Kit Nghệ Thuật & Quà Tặng** | | | | **2.300.000** | |
-| 3 | Bút vẽ vải chuyên dụng an toàn (hộp 8 màu) | 15 | bộ | 60.000 | 900.000 | Dùng chung tại các bàn workshop |
-| 4 | Sticker ủi nhiệt hình nhân vật hoạt hình ngộ nghĩnh | 250 | miếng | 2.000 | 500.000 | Cho bé tự chọn trang trí mũ |
-| 5 | Hộp quà kraft thân thiện môi trường + Giấy rơm + Thiệp | 120 | bộ | 7.500 | 900.000 | Đóng gói quà trang trọng |
-| **C** | **Chi phí Truyền thông, Hậu cần & Sự kiện** | | | | **1.250.000** | |
-| 6 | Standee, Banner trang trí Booth sảnh Delta & Bệnh viện | 3 | cái | 150.000 | 450.000 | In ấn tại tiệm in Hòa Lạc |
-| 7 | Bánh kẹo dinh dưỡng, sữa tươi cho các bé | 120 | suất | 5.000 | 600.000 | Quà phụ tặng kèm khi bé dự workshop |
-| 8 | Chi phí di chuyển vận chuyển quà (xe buýt / xe chở đồ) | 2 | chuyến | 100.000 | 200.000 | Chở hàng Hòa Lạc - Hà Nội |
-| **D** | **Quỹ Dự phòng Rủi ro (10%)** | | | | **775.000** | Phát sinh đột xuất |
-| | **TỔNG KINH PHÍ DỰ KIẾN (A + B + C + D)** | | | | **8.525.000** | *(Tám triệu năm trăm hai mươi lăm nghìn đồng)* |
+| **A** | **Chi phí Sản xuất Mũ vải Y tế (Quy mô 70 chiếc mũ)** | | | | **3.150.000** | |
+| 1 | Vải thun cotton compact 100% kháng khuẩn chuẩn xuất khẩu bổ sung | 10 | kg | 140.000 | 1.400.000 | Thu gom vải sạch + mua bổ sung cây vải chuẩn |
+| 2 | Tiền công cắt may 2 lớp lộn giấu chỉ tại xưởng thợ may khuyết tật | 70 | chiếc | 25.000 | 1.750.000 | Hỗ trợ trực tiếp sinh kế thợ may khuyết tật |
+| **B** | **Chi phí Bộ Kit Nghệ Thuật & Quà Tặng Bệnh Nhi (70 suất)** | | | | **1.950.000** | |
+| 3 | Bút vẽ màu trên vải không độc hại ASTM D-4236 (12 màu/bộ) | 10 | bộ | 50.000 | 500.000 | Dùng chung tại các bàn workshop bệnh viện |
+| 4 | Sticker ủi nhiệt hình linh vật hoạt hình Hope Maker | 200 | miếng | 2.000 | 400.000 | Cho bé tự do trang trí mũ theo sở thích |
+| 5 | Hộp quà kraft quai xách cao cấp + Giấy rơm tiệt trùng + Thiệp chúc | 70 | bộ | 15.000 | 1.050.000 | Đóng gói quà trang trọng, ấm áp gửi bé |
+| **C** | **Chi phí Truyền thông, Hậu cần & Sự kiện tại Viện** | | | | **1.400.000** | |
+| 6 | In ấn Standee, Banner Booth Delta & Backdrop Workshop BV K | 2 | cái | 150.000 | 300.000 | In ấn tại Hòa Lạc và lắp đặt tại BV K |
+| 7 | Suất quà dinh dưỡng (sữa tươi tiệt trùng, bánh mềm yến mạch y tế) | 70 | suất | 12.000 | 840.000 | Bổ sung dinh dưỡng nhẹ nhàng cho bé |
+| 8 | Chi phí vận chuyển nguyên vật liệu Hòa Lạc - BV K Tân Triều (2 chiều) | 2 | chuyến | 130.000 | 260.000 | Chở vật tư & quà tặng bằng xe trung chuyển |
+| **D** | **Quỹ Dự phòng Rủi ro Phát sinh & Hỗ trợ Y tế (7.1%)** | | | | **500.000** | |
+| 9 | Quỹ dự phòng rủi ro biến động giá / hỗ trợ y tế khẩn cấp tại viện | 1 | gói | 500.000 | 500.000 | Dự phòng phát sinh vật tư & hỗ trợ khẩn cấp |
+| | **TỔNG KINH PHÍ DỰ KIẾN (A + B + C + D)** | | | | **7.000.000** | *(Bảy triệu đồng chẵn)* |
 
-### 4.2. Phương án gây quỹ & Xã hội hóa nguồn lực
+> **Cơ cấu vốn đối ứng hạt giống (Seed Equity Guarantee):**
+> 100% kinh phí **7.000.000 VNĐ** được cam kết đóng góp đối ứng bởi 7 thành viên nhóm Hope Makers (1.000.000 VNĐ/thành viên). Cơ chế này đảm bảo dự án luôn sẵn sàng 100% nguồn lực tài chính để triển khai đúng hạn mà không phụ thuộc vào tiến độ hay rủi ro gây quỹ bên ngoài.
 
-Để đảm bảo nguồn vốn 8.525.000 VNĐ mà không tạo áp lực tài chính cho sinh viên, nhóm triển khai **03 kênh gây quỹ kết hợp**:
+### 4.2. Phương án gây quỹ & Xã hội hóa nguồn lực (Hoàn vốn & Mở rộng quà tặng)
 
-1. **Bán sản phẩm gây quỹ gây ấn tượng (Fundraising Merchandise - 45% tổng quỹ ~ 3.850.000 VNĐ):**
-   - Đặt in 200 móc khóa acrylic hoạt hình hình chiếc mũ hy vọng (giá vốn: 7.000đ/cái, bán: 20.000đ/cái -> Lãi: 2.600.000đ).
-   - Bán 100 túi tote vải canvas in họa tiết do nhóm thiết kế (giá vốn: 25.000đ/cái, bán: 45.000đ/cái -> Lãi: 2.000.000đ).
-2. **Kêu gọi quyên góp vi mô "Nuôi Mũ Hy Vọng" (Crowdfunding - 35% tổng quỹ ~ 3.000.000 VNĐ):**
-   - Phát động chiến dịch *"50.000đ = 1 Chiếc Mũ Cho Chiến Binh Nhí"* trên mạng xã hội.
-   - Người ủng hộ được ghi tên vinh danh trên thiệp đính kèm trong hộp quà gửi tặng bé.
-3. **Vận động tài trợ doanh nghiệp & Quỹ từ thiện (Sponsorship - 20% tổng quỹ ~ 1.700.000 VNĐ):**
-   - Gửi thư ngỏ xin tài trợ hiện vật từ các xưởng dệt may (tài trợ vải vụn cotton sạch) và nhà sách/nhà sản xuất văn phòng phẩm (tài trợ bút màu vẽ vải).
+Nhằm hoàn lại nguồn vốn hạt giống ban đầu cho các thành viên và tạo quỹ dôi dư để mở rộng thêm suất quà dinh dưỡng / hỗ trợ viện phí cho các bệnh nhi có hoàn cảnh khó khăn tại Khoa Nhi ung bướu BV K Tân Triều, nhóm triển khai **Menu gây quỹ xã hội hóa minh bạch**:
+
+1. **Gói "Chiếc Mũ Nhỏ" (50.000 VNĐ):**
+   - *KPI:* Bán/kêu gọi 35 suất $\rightarrow$ Doanh thu: 1.750.000 VNĐ.
+   - *Đóng góp trực tiếp:* Hoàn vốn tài trợ 35 chiếc mũ y tế giấu chỉ; chi trả 35 suất công thợ may khuyết tật; vinh danh nhà hảo tâm trên Fanpage.
+2. **Gói "Hộp Quà Hạnh Phúc" (100.000 VNĐ):**
+   - *KPI:* Bán/kêu gọi 25 suất $\rightarrow$ Doanh thu: 2.500.000 VNĐ.
+   - *Đóng góp trực tiếp:* Nâng cấp trọn gói 25 hộp quà kraft y tế (mũ cotton + bộ kit bút màu ASTM + thiệp chúc) gửi tận tay bệnh nhi.
+3. **Gói "Workshop Nụ Cười" (500.000 VNĐ):**
+   - *KPI:* Vận động 5 gói doanh nghiệp / nhà hảo tâm $\rightarrow$ Doanh thu: 2.500.000 VNĐ.
+   - *Đóng góp trực tiếp:* Mở rộng thêm quà dinh dưỡng và đóng góp trực tiếp vào quỹ hỗ trợ viện phí khẩn cấp cho các bệnh nhi nghèo; nhận thư tri ân và kỷ niệm chương dự án.
 
 ---
 
@@ -316,7 +319,7 @@ Tuần 10: [Tổng kết dự án, Báo cáo nghiệm thu môn SSG]
 
 *Quy ước:* **R** (Responsible - Thực hiện chính), **A** (Accountable - Chịu trách nhiệm duyệt), **C** (Consulted - Tham vấn chuyên môn), **I** (Informed - Nhận thông tin).
 
-| Công việc / Đầu mục dự án | Leader (Nguyễn Văn A) | Nội dung (Trần Thị B) | Truyền thông (Lê Hoàng C) | Thiết kế (Phạm Thị D) | Hậu cần (Vũ Minh E) | Tài chính (Hoàng Lan F) | Đối ngoại (Đỗ Quang G) |
+| Công việc / Đầu mục dự án | Leader (Minh Dũng) | Nội dung (Mai Tân) | Media (Tuấn Anh) | Tài chính (Kim Yến) | Hậu cần (Quốc Trung) | Truyền thông (Thiện Nhân) | Đối ngoại (Nguyên Khánh) |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Khảo sát thực trạng & Viết đề xuất | **A** | **R** | C | C | I | I | I |
 | Thu gom vải & Hợp tác xưởng may | A | I | I | C | **R** | C | C |
