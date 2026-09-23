@@ -15,14 +15,19 @@
     <div class="studio-brand">
       <img src="avatar_hope_maker.png" alt="Logo Hope Maker" class="studio-logo-badge">
       <div>
-        <h1>Hope Makers <span>Magazine Proposal Studio</span></h1>
+        <h1>Hope Makers <span>Proposal Studio</span></h1>
+        <div id="save-status-indicator" style="font-size: 11px; color: #16A34A; font-weight: 600; display: flex; align-items: center; gap: 5px;">
+          <span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#16A34A;"></span>
+          Đang bật sửa toàn diện (Bấm vào bất kỳ chữ hoặc ảnh để sửa)
+        </div>
       </div>
     </div>
 
     <div class="studio-tools">
-      <button id="btn-toggle-edit" class="btn-tool active">✏️ Đang Bật Sửa Chữ</button>
-      <a href="De_Xuat_Du_An_Mu_Hy_Vong_HopeMakers.pdf" download="De_Xuat_Du_An_Mu_Hy_Vong_HopeMakers.pdf" class="btn-tool btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px;">📥 Tải Bản PDF Gốc (12 Trang)</a>
-      <button id="btn-print-pdf" class="btn-tool">🖨️ Xuất PDF Web (A4)</button>
+      <button id="btn-toggle-edit" class="btn-tool active">✏️ Đang Bật Sửa Toàn Diện</button>
+      <button id="btn-manual-save" class="btn-tool">💾 Lưu Ngay</button>
+      <a href="De_Xuat_Du_An_Mu_Hy_Vong_HopeMakers.pdf" download="De_Xuat_Du_An_Mu_Hy_Vong_HopeMakers.pdf" class="btn-tool btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px;">📥 Tải PDF Gốc (12 Trang)</a>
+      <button id="btn-print-pdf" class="btn-tool">🖨️ Xuất PDF Vừa Sửa (A4)</button>
       <button id="btn-download-html" class="btn-tool">💾 Tải HTML</button>
       <button id="btn-reset-default" class="btn-tool" style="color:#C62828;">🔄 Khôi phục gốc</button>
     </div>

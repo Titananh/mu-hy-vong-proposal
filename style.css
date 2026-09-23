@@ -1559,17 +1559,33 @@ body {
   display: none !important;
 }
 
-[contenteditable="true"]:hover {
-  outline: 1.5px dashed var(--sun-yellow);
-  background-color: rgba(253, 184, 19, 0.05);
+/* Full-Document Universal In-Place Editing */
+body.is-editing [contenteditable="true"] {
+  transition: background-color 0.15s ease, outline 0.15s ease;
+  cursor: text;
+}
+
+body.is-editing [contenteditable="true"]:hover {
+  outline: 1.5px dashed rgba(33, 76, 140, 0.45) !important;
+  background-color: rgba(33, 76, 140, 0.04) !important;
   border-radius: 4px;
 }
 
-[contenteditable="true"]:focus {
-  outline: 2px solid var(--sun-yellow);
-  background-color: #fff;
-  box-shadow: 0 0 0 3px rgba(253, 184, 19, 0.2);
+body.is-editing [contenteditable="true"]:focus {
+  outline: 2px solid #214C8C !important;
+  background-color: #fff !important;
+  box-shadow: 0 0 0 3px rgba(33, 76, 140, 0.15);
   border-radius: 4px;
+}
+
+body.is-editing .document-wrapper img {
+  cursor: pointer !important;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+body.is-editing .document-wrapper img:hover {
+  outline: 2.5px dashed #1E88E5 !important;
+  filter: brightness(1.05);
 }
 
 /* =========================================================

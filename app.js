@@ -1,152 +1,218 @@
 /**
  * HOPE MAKERS - PROPOSAL STUDIO ENGINE (app.js)
- * Manages theme switching, image uploading & base64 caching,
- * in-place rich text editing, auto-save to localStorage, and PDF/HTML export.
+ * Full-Document Universal Editing Engine:
+ * - Allows in-place editing of ALL text elements across all 12 pages (titles, cards, tables, lists, footnotes).
+ * - Allows replacing ANY image with auto-resizing via in-memory Canvas to keep localStorage light.
+ * - Continuous debounced auto-save to localStorage with instant restore upon reload.
+ * - Manual Save button with instant checkmark feedback.
+ * - One-click export for pristine A4 PDF, customized A4 PDF, and standalone HTML.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeManager();
-  initImageUploaders();
-  initEditableManager();
-  initStorageSync();
-  initExportManager();
+  initFullStudioEngine();
 });
 
-/* =========================================================
-   1. THEME MANAGER
-   ========================================================= */
-function initThemeManager() {
-  const chips = document.querySelectorAll('.theme-chip');
-  const savedTheme = localStorage.getItem('hope_makers_theme') || 'theme-ocean';
-
-  applyTheme(savedTheme);
-
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const theme = chip.getAttribute('data-theme');
-      applyTheme(theme);
-    });
-  });
-}
-
-function applyTheme(themeName) {
-  document.body.className = ''; // clear existing themes
-  if (themeName && themeName !== 'theme-ocean') {
-    document.body.classList.add(themeName);
-  }
-  localStorage.setItem('hope_makers_theme', themeName);
-
-  document.querySelectorAll('.theme-chip').forEach(chip => {
-    chip.classList.toggle('active', chip.getAttribute('data-theme') === themeName);
-  });
-}
-
-/* =========================================================
-   2. IMAGE UPLOAD & LOCAL STORAGE PERSISTENCE
-   ========================================================= */
-function initImageUploaders() {
-  const fileInput = document.getElementById('global-image-input');
-  let currentTargetImgId = null;
-
-  // Click on upload overlay or parent box
-  document.querySelectorAll('[data-img-target]').forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentTargetImgId = trigger.getAttribute('data-img-target');
-      fileInput.click();
-    });
-  });
-
-  // Handle file selected
-  fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file || !currentTargetImgId) return;
-
-    if (!file.type.startsWith('image/')) {
-      alert('Vui lòng chọn file hình ảnh (PNG, JPG, SVG, WebP)!');
-      return;
-    }
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const base64Data = event.target.result;
-      const targetImg = document.getElementById(currentTargetImgId);
-      if (targetImg) {
-        targetImg.src = base64Data;
-        // Save to localStorage
-        try {
-          localStorage.setItem(`hope_img_${currentTargetImgId}`, base64Data);
-        } catch (err) {
-          console.warn('LocalStorage limit reached for image storage, displayed in DOM only.', err);
-        }
-      }
-    };
-    reader.readAsDataURL(file);
-    fileInput.value = ''; // reset
-  });
-
-  // Restore saved images from localStorage
-  document.querySelectorAll('img[id]').forEach(img => {
-    const saved = localStorage.getItem(`hope_img_${img.id}`);
-    if (saved) {
-      img.src = saved;
-    }
-  });
-}
-
-/* =========================================================
-   3. IN-PLACE TEXT EDITING & AUTO-SAVE
-   ========================================================= */
-function initEditableManager() {
+function initFullStudioEngine() {
+  const STORAGE_KEY = 'hope_makers_full_document_v3';
+  const docWrapper = document.querySelector('.document-wrapper');
   const toggleBtn = document.getElementById('btn-toggle-edit');
-  let isEditing = true; // default true for convenience
+  const saveBtn = document.getElementById('btn-manual-save');
+  const statusIndicator = document.getElementById('save-status-indicator');
+  const fileInput = document.getElementById('global-image-input');
 
-  function updateEditableState(enabled) {
-    document.querySelectorAll('.editable').forEach(el => {
-      el.contentEditable = enabled ? 'true' : 'false';
+  let isEditing = true;
+  let currentTargetImg = null;
+  let saveTimeout = null;
+
+  // 1. RESTORE PREVIOUSLY SAVED FULL DOCUMENT STATE (IF ANY)
+  const savedDocument = localStorage.getItem(STORAGE_KEY);
+  if (savedDocument && docWrapper) {
+    try {
+      docWrapper.innerHTML = savedDocument;
+      console.log('Restored full custom document state from localStorage.');
+    } catch (e) {
+      console.warn('Could not restore saved document:', e);
+    }
+  }
+
+  // 2. MAKE ALL TEXT ELEMENTS IN THE ENTIRE DOCUMENT EDITABLE
+  function refreshEditableElements(enabled) {
+    if (!docWrapper) return;
+
+    // Selector covering every text-bearing container across all 12 pages
+    const textSelectors = [
+      'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+      'p', 'li', 'td', 'th', 'span',
+      '.editable', '[data-save-key]',
+      '.page-category-super', '.ribbon-banner',
+      '.page-intro-desc', '.academic-section-subhead',
+      '.academic-card-title', '.page-bottom-footnote',
+      '.team-commitment-strip', '.team-commitment-label',
+      '.academic-member-name', '.academic-member-role', '.academic-member-dept',
+      '.leader-name', '.leader-role',
+      '.hn-main-title', '.hn-project-title', '.hn-term-year',
+      '.hn-cred-lbl', '.hn-toc-title', '.hn-toc-dots', '.hn-toc-page',
+      'blockquote', 'cite', 'caption', 'strong', 'em', 'b', 'i'
+    ].join(', ');
+
+    docWrapper.querySelectorAll(textSelectors).forEach(el => {
+      // Ensure we don't make big layout wrappers editable as a giant block
+      if (el.children.length === 0 || el.classList.contains('editable') || el.tagName.match(/^H[1-6]$|^P$|^LI$|^TD$|^TH$/)) {
+        el.contentEditable = enabled ? 'true' : 'false';
+        el.spellcheck = false;
+      }
     });
+
+    document.body.classList.toggle('is-editing', enabled);
+
     if (toggleBtn) {
       toggleBtn.classList.toggle('active', enabled);
       toggleBtn.innerHTML = enabled 
-        ? '✏️ Đang Bật Sửa Chữ' 
+        ? '✏️ Đang Bật Sửa Toàn Diện' 
         : '🔒 Bật Chế Độ Sửa Chữ';
+    }
+
+    if (statusIndicator) {
+      statusIndicator.innerHTML = enabled
+        ? '<span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#16A34A;"></span> Đang bật sửa toàn diện (Bấm vào bất kỳ chữ hoặc ảnh để sửa)'
+        : '<span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#64748B;"></span> Đã khóa chế độ sửa (Chế độ đọc / trình chiếu)';
+      statusIndicator.style.color = enabled ? '#16A34A' : '#64748B';
     }
   }
 
+  // 3. AUTO-SAVE ENGINE (DEBOUNCED)
+  function triggerAutoSave(immediate = false) {
+    if (saveTimeout) clearTimeout(saveTimeout);
+
+    const performSave = () => {
+      if (!docWrapper) return;
+
+      try {
+        localStorage.setItem(STORAGE_KEY, docWrapper.innerHTML);
+        if (statusIndicator && isEditing) {
+          statusIndicator.innerHTML = '<span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#2563EB;"></span> 💾 Đã tự động lưu thay đổi mới nhất!';
+          statusIndicator.style.color = '#2563EB';
+          setTimeout(() => {
+            if (isEditing && statusIndicator) {
+              statusIndicator.innerHTML = '<span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#16A34A;"></span> Đang bật sửa toàn diện (Bấm vào bất kỳ chữ hoặc ảnh để sửa)';
+              statusIndicator.style.color = '#16A34A';
+            }
+          }, 2000);
+        }
+      } catch (err) {
+        console.warn('LocalStorage save error (likely quota exceeded):', err);
+        if (statusIndicator) {
+          statusIndicator.innerHTML = '⚠️ Bộ nhớ trình duyệt gần đầy, hãy tải file HTML để lưu vĩnh viễn!';
+          statusIndicator.style.color = '#DC2626';
+        }
+      }
+    };
+
+    if (immediate) {
+      performSave();
+    } else {
+      saveTimeout = setTimeout(performSave, 400);
+    }
+  }
+
+  // Listen to input and blur across entire document wrapper
+  if (docWrapper) {
+    docWrapper.addEventListener('input', () => triggerAutoSave(false));
+    docWrapper.addEventListener('blur', (e) => {
+      if (e.target && e.target.isContentEditable) {
+        triggerAutoSave(true);
+      }
+    }, true);
+  }
+
+  // Toggle edit button
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       isEditing = !isEditing;
-      updateEditableState(isEditing);
+      refreshEditableElements(isEditing);
     });
   }
 
-  updateEditableState(isEditing);
-
-  // Auto-save on blur for elements with data-save-key
-  document.querySelectorAll('[data-save-key]').forEach(el => {
-    el.addEventListener('blur', () => {
-      const key = el.getAttribute('data-save-key');
-      localStorage.setItem(`hope_txt_${key}`, el.innerHTML);
+  // Manual save button
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      triggerAutoSave(true);
+      saveBtn.innerHTML = '✅ Đã Lưu!';
+      setTimeout(() => {
+        saveBtn.innerHTML = '💾 Lưu Ngay';
+      }, 1500);
     });
-  });
-}
+  }
 
-function initStorageSync() {
-  // Restore saved text
-  document.querySelectorAll('[data-save-key]').forEach(el => {
-    const key = el.getAttribute('data-save-key');
-    const saved = localStorage.getItem(`hope_txt_${key}`);
-    if (saved !== null) {
-      el.innerHTML = saved;
-    }
-  });
-}
+  // 4. CLICK ANY IMAGE TO REPLACE IT
+  function attachImagePickers() {
+    if (!docWrapper) return;
 
-/* =========================================================
-   4. EXPORT & PRINT ACTIONS
-   ========================================================= */
-function initExportManager() {
-  // Print / PDF
+    docWrapper.querySelectorAll('img').forEach(img => {
+      img.title = '📷 Bấm vào đây để tải ảnh từ máy tính lên thay thế!';
+      img.style.cursor = 'pointer';
+
+      img.addEventListener('click', (e) => {
+        if (!isEditing) return;
+        e.stopPropagation();
+        currentTargetImg = img;
+        if (fileInput) fileInput.click();
+      });
+    });
+  }
+
+  // Handle image file selection with in-memory Canvas resizing
+  if (fileInput) {
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file || !currentTargetImg) return;
+
+      if (!file.type.startsWith('image/')) {
+        alert('Vui lòng chọn một tệp hình ảnh (PNG, JPG, WebP, SVG)!');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const rawBase64 = event.target.result;
+
+        // Use canvas to compress / resize to avoid localStorage quota issues
+        const tempImg = new Image();
+        tempImg.onload = () => {
+          const maxDim = 800; // max dimension for crystal-clear A4 display
+          let width = tempImg.width;
+          let height = tempImg.height;
+
+          if (width > maxDim || height > maxDim) {
+            if (width > height) {
+              height = Math.round((height * maxDim) / width);
+              width = maxDim;
+            } else {
+              width = Math.round((width * maxDim) / height);
+              height = maxDim;
+            }
+          }
+
+          const canvas = document.createElement('canvas');
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(tempImg, 0, 0, width, height);
+
+          // Get optimized base64
+          const optimizedBase64 = canvas.toDataURL(file.type === 'image/png' ? 'image/png' : 'image/jpeg', 0.9);
+
+          currentTargetImg.src = optimizedBase64;
+          triggerAutoSave(true);
+        };
+        tempImg.src = rawBase64;
+      };
+      reader.readAsDataURL(file);
+      fileInput.value = ''; // Reset input
+    });
+  }
+
+  // 5. EXPORT & RESET HANDLERS
   const printBtn = document.getElementById('btn-print-pdf');
   if (printBtn) {
     printBtn.addEventListener('click', () => {
@@ -154,7 +220,6 @@ function initExportManager() {
     });
   }
 
-  // Standalone HTML Download
   const downloadHtmlBtn = document.getElementById('btn-download-html');
   if (downloadHtmlBtn) {
     downloadHtmlBtn.addEventListener('click', () => {
@@ -162,38 +227,40 @@ function initExportManager() {
     });
   }
 
-  // Reset to default
   const resetBtn = document.getElementById('btn-reset-default');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
-      if (confirm('Bạn có chắc muốn khôi phục thiết kế và nội dung về mặc định ban đầu không? Mọi ảnh và chữ bạn tự sửa sẽ bị xóa.')) {
-        // Clear all hope_* keys
+      if (confirm('Bạn có chắc muốn khôi phục tài liệu về bản gốc ban đầu không? Mọi nội dung chữ và ảnh bạn tự sửa sẽ được đặt lại theo mẫu chuẩn của nhóm.')) {
+        localStorage.removeItem(STORAGE_KEY);
+        // Clear legacy keys too
         Object.keys(localStorage).forEach(k => {
-          if (k.startsWith('hope_')) {
-            localStorage.removeItem(k);
-          }
+          if (k.startsWith('hope_')) localStorage.removeItem(k);
         });
         window.location.reload();
       }
     });
   }
+
+  // Initial activations
+  refreshEditableElements(isEditing);
+  attachImagePickers();
 }
 
 function exportStandaloneHtml() {
-  // Clone current document
   const clone = document.documentElement.cloneNode(true);
 
-  // Remove floating studio toolbar from exported file
+  // Remove toolbar
   const navbar = clone.querySelector('.studio-navbar');
   if (navbar) navbar.remove();
 
-  // Remove overlay buttons
+  // Clean overlays & hidden inputs
   clone.querySelectorAll('.upload-btn-overlay').forEach(el => el.remove());
   clone.querySelectorAll('.hidden-file-input').forEach(el => el.remove());
 
-  // Disable contenteditable
+  // Remove contenteditable attributes
   clone.querySelectorAll('[contenteditable]').forEach(el => {
     el.removeAttribute('contenteditable');
+    el.removeAttribute('spellcheck');
   });
 
   const htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
